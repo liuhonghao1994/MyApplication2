@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="custome.atguigu.com.myapplication.MainActivity">
+    <!--标题栏线性布局-->
+    <include layout="@layout/titlebar"/>
+    <!--framelayout布局-->
+    <FrameLayout
+        android:id="@+id/fl_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <!--RedioGoup嵌套RadioButton-->
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#11000000"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <RadioButton android:id="@+id/rb_local_video"
+            android:drawableTop="@drawable/rb_local_video_selector"
+            style="@style/bottom_button_style"
+            android:text="本地视频"/>
+        <RadioButton android:id="@+id/rb_local_audio"
+            android:drawableTop="@drawable/rb_local_audio_selector"
+            style="@style/bottom_button_style"
+            android:text="本地音乐"/>
+        <RadioButton android:id="@+id/rb_net_audio"
+            android:drawableTop="@drawable/rb_net_audio_selector"
+            style="@style/bottom_button_style"
+            android:text="网络音乐"/>
+        <RadioButton android:id="@+id/rb_net_video"
+            android:drawableTop="@drawable/rb_net_video_selector"
+            style="@style/bottom_button_style"
+            android:text="Recycleview"/>
+    </RadioGroup>
+</LinearLayout>
